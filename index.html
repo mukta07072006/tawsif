@@ -1,56 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html>
 <head>
-  <meta charset="UTF-8">
-  <title>Client Status</title>
+  <title>Tawsif's 2X</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ece9e6, #ffffff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #333;
-      position: relative;
+      background-color: #f9f9f9;
     }
-
+    .page {
+      padding: 40px 20px;
+      text-align: center;
+    }
     h1 {
-      font-size: 3em;
-      color: #2c3e50;
-      margin-bottom: 0.5em;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-
-    p {
-      font-size: 1.2em;
-      background-color: #f0f0f0;
-      padding: 0.5em 1em;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .info, .course, .payment, .registration {
+      margin-top: 20px;
     }
-
-    .logo {
-      position: absolute;
-      bottom: 20px;
-      width: 100px;
-      filter: grayscale(100%);
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
     }
-
-    .logo:hover {
-      opacity: 1;
+    .hidden {
+      display: none;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    .text-block {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-<body>
-  <h1>Where is my client?</h1>
-  <p>Code Updated At 5:40 AM</p>
+<body>  <!-- Page 1 -->  <div class="page">
+    <h1>Tawsif's 2X</h1><div class="info">
+  <img src="tawsif1.jpg"><br><br>
+  <strong>Name:</strong> Tawsif Reza<br>
+  <strong>Email:</strong> tawsifr0.3@gmail.com<br>
+  <strong>Phone:</strong> 015756488888
+</div>
 
-  <img src="logo.png" alt="Logo" class="logo">
-</body>
+<button class="button" onclick="toggleCourse()">Click</button>
+
+<div id="courseSection" class="hidden course">
+  <img src="tawsif2.jpg""><br><br>
+  <button class="button" onclick="togglePayment()">Payment</button>
+
+  <div id="paymentSection" class="hidden payment">
+    <p><strong>Bkash:</strong> 015756488888</p>
+    <p><strong>Nagad:</strong> 015756488888</p>
+  </div>
+</div>
+
+<div class="registration">
+  <button class="button" onclick="toggleRegistration()">Registration</button>
+
+  <div id="registrationSection" class="hidden">
+    <p><strong>Facebook:</strong>
+      <a href="https://www.facebook.com/share/1APCaXYXAM/?mibextid=qi2Omg" target="_blank">
+        Click to Visit My Facebook
+      </a>
+    </p>
+  </div>
+</div>
+
+  </div>  <!-- Page 2 -->  <div class="page" style="background-color: #fff;">
+    <div class="section-title">Dear Students,</div>
+    <div class="text-block">
+      English is not just a subject—it's a powerful life skill that supports your academics, career, and everyday communication.<br>
+      When you strengthen your grammar, vocabulary, writing, and speaking, your communication power multiplies.
+      <br><br>
+      Even a little consistent practice each day can make you proficient. If you ever think "I can't," remember—you can, and you will, if you start now.<br>
+      The truth is, <strong>focusing on English is one of the best opportunities to shape a better version of yourself.</strong>
+    </div><div class="section-title">Introducing: Tawsif's 2X English Mastery Program</div>
+<div class="text-block">
+  Presenting a <strong>self-paced, practical, and interactive English course</strong> where you'll:
+  <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+    <li>Clearly understand grammar concepts</li>
+    <li>Practice freehand writing with regular tasks</li>
+    <li>Ask questions in live Q&A sessions</li>
+    <li>Build confidence in academic English</li>
+  </ul>
+  <br>
+  <strong>Starting Date:</strong> September 3, 2025<br>
+  <strong>Limited Time Offer: Get 25% OFF!</strong><br>
+  <strong>Contact:</strong> 015756488888<br>
+  <strong>Facebook:</strong> <a href="https://www.facebook.com/share/1APCaXYXAM/?mibextid=qi2Omg" target="_blank">Click here</a><br><br>
+  <strong>Start now—invest in your future with Tawsif's 2X!</strong>
+</div>
+
+  </div>  <script>
+    function toggleCourse() {
+      document.getElementById('courseSection').classList.toggle('hidden');
+    }
+    function togglePayment() {
+      document.getElementById('paymentSection').classList.toggle('hidden');
+    }
+    function toggleRegistration() {
+      document.getElementById('registrationSection').classList.toggle('hidden');
+    }
+  </script></body>
 </html>
